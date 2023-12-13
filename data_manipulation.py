@@ -1,11 +1,11 @@
 import pandas as pd
-import csv
 
-def readData():
-    print('Function Data')
+def readData(fileName):
+    data = pd.read_excel(fileName)
+    return data
+    """
+    print(data["Région"])
+    """
 
-    with open("data.xlsx", 'r') as input:
-        reader = csv.DictReader(input)
-        print(reader)
-
-readData()
+def mapDepitRegion():
+    data = readData("nombre_debit_departement.xlsx")
