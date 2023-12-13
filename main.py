@@ -7,9 +7,8 @@ from dash import Dash, dcc
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-data = pd.read_excel("data.xlsx")
-for row in data:
-    print(row)
+data = pd.read_excel("Pourcentage_debit_national.xlsx")
+print(data)
 
 app = dash.Dash(__name__)
 
