@@ -53,11 +53,6 @@ def UpdatePourcentageDebitFigure(bit):
     mapB = px.line(x=data['Région'], y=dataB)
     return mapB
 
-dataMap = pd.DataFrame({
-    'code_dep': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '21', '22', '23', '24', '25'],
-    'Pourcentage_05Mbit': [98.7, 98.8, 99.5, 98.9, 98.9, 97.1, 98.6, 95.1, 98.4, 98.8, 99.1, 98.4, 97.0, 96.9, 99.1, 98.0, 99.1, 98.2, 96.7, 96.4, 98.4, 96.7, 99.3, 97.9],
-    # Ajoutez d'autres colonnes de pourcentages selon vos besoins
-})
 def display_choropleth_map(bit):
     dataMapDebit = data['0,5 Mbit/s']
     # Affichage de la carte

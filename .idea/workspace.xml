@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="098b9dcb-58dc-4eed-ab36-aca2edb7ef66" name="Changes" comment="Ajouter un map et un histogramme">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pourcentage_debit_departement.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Pourcentage_debit_departement.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_manipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_manipulation.py" afterDir="false" />
+    <list default="true" id="098b9dcb-58dc-4eed-ab36-aca2edb7ef66" name="Changes" comment="Dashboard">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702634948212</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Dashboard">
+      <created>1704222635800</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704222635801</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +197,7 @@
     <MESSAGE value="create Dashboard and add data files" />
     <MESSAGE value="Add readData function" />
     <MESSAGE value="Ajouter un map et un histogramme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouter un map et un histogramme" />
+    <MESSAGE value="Dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dashboard" />
   </component>
 </project>
