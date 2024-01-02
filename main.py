@@ -1,10 +1,9 @@
-import pandas as pd
-from dash import dash_table, Output, Input
+from dash import Output, Input
 from data_manipulation import readData, histDebitNational, graph_hist
 from dash import html
 import dash
 import plotly.express as px
-from dash import Dash, dcc
+from dash import dcc
 import json
 
 with open("departements-region.json") as response:
@@ -138,7 +137,6 @@ app.layout = html.Div([
 
     # Ajouter une ligne horizontale
     html.Hr(),
-    html.H3('Nombre de locaux par région:', style={'color': '#7E7288', 'textAlign': 'left'}),
 
     # Histogramme coloré
     html.Div(className='row', children=[
@@ -146,7 +144,7 @@ app.layout = html.Div([
             figure=histDebitNational(),
         )], style={'display': 'inline-block', 'width': '49%'}),
 
-    # Histogramme
+    # Histogramme de nombre de locaux par région
     histogramme_NBL_Region,
 
 ], style={'overflowX': 'hidden'})
