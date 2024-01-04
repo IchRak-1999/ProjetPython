@@ -1,0 +1,12 @@
+Requirements:
+
+Ici vous trouverez les librairies à installer pour pouvoir lancer le projet.
+
+1.Plotly:
+$ pip install plotly
+
+2.Pandas:
+$ pip install pandas
+
+3.Dash:
+$ pip install dash
