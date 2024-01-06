@@ -59,7 +59,6 @@ Le projet est composé des fichiers suivants :
 1. **Interface Dash**: Le script crée une interface utilisateur Dash comprenant un titre, un sélecteur de vitesse de débit, des graphiques interactifs et des mises à jour en temps réel.
 
 2. **Callbacks Dash**:
-    - **`UpdateMap(bit)`**: Met à jour la carte en fonction de la vitesse de débit sélectionnée.
     - **`UpdatePourcentageDebitFigure(bit)`**: Met à jour le graphique de pourcentage de débit en fonction de la vitesse de débit sélectionnée.
     - **`display_choropleth_map_Update(bit)`**: Met à jour la carte choroplèthe en fonction de la vitesse de débit sélectionnée.
 
@@ -72,8 +71,6 @@ Le projet est composé des fichiers suivants :
 2. **Personnalisation**:
    - Modifiez les fichiers de données au besoin pour mettre à jour les informations affichées dans les graphiques.
 
-## 5. Remarques
-
-- Les cartes sont basées sur la bibliothèque Plotly et utilisent un fichier GeoJSON pour la représentation géographique.
+## 5. Remarque
 
 - Assurez-vous que les fichiers de données sont correctement nommés et situés dans le répertoire du projet.
