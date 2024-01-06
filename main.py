@@ -32,12 +32,27 @@ histogramme_NBL_Region = html.Div(dcc.Graph(figure=histo, id='histo'),
     Input('dropdown', 'value')
 )
 def UpdateMap(bit):
+    """
+        Mettre à jour l'affichage de la carte en fonction de vitesse de débit choisi
+
+        Args:
+            - bit: valeur contient la vitesse de débit
+
+        Returns:
+            Affiche la carte (mapA)
+        """
     dataA = data[bit]
     mapA = px.scatter(x=data['Région'], y=dataA)
     return mapA
 
 
 def CreateMap():
+    """
+        Affichage de la garphe avec la valeur par défaut (0,5 Mbit/s)
+
+        Returns:
+            Affiche la carte (map)
+        """
     # Graphe des points
     map = px.scatter(data, x="Région", y="0,5 Mbit/s")
     return map
@@ -48,50 +63,26 @@ def CreateMap():
     Input('dropdown', 'value')
 )
 def UpdatePourcentageDebitFigure(bit):
+    """
+        Mettre à jour l'affichage de la graphe en fonction de vitesse de débit choisi
+
+        rgs:
+            - bit: valeur contient la vitesse de débit
+
+        Returns:
+            Affiche la graphe (mapB)
+        """
     dataB = data[bit]
     mapB = px.line(x=data['Région'], y=dataB)
     return mapB
 
-def display_choropleth_map(bit):
-    dataMapDebit = data['0,5 Mbit/s']
-    # Affichage de la carte
-    fig = px.choropleth_mapbox(
-        dataMapDebit, geojson=GEOJSON, locations=regions, color=bit,
-        color_continuous_scale="Viridis",
-        range_color=(0, 100),
-        mapbox_style="carto-positron",
-        featureidkey="properties.code",
-        zoom=5, center={"lon": -2.573158317817201, "lat": 46.75212876753963},
-        opacity=0.5,
-        labels={'Région': 'Débit'}
-    )
-
-    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-    return fig
-
-@app.callback(
-    Output("mapDebit", "figure"),
-    Input("dropdown", "value"))
-def display_choropleth_map_Update(bit):
-    dataMapDebit = data[bit]
-    # Affichage de la carte
-    fig = px.choropleth_mapbox(
-        dataMapDebit, geojson=GEOJSON, locations=regions, color=bit,
-        color_continuous_scale="Viridis",
-        color_continuous_midpoint=0,
-        range_color=(0, 100),
-        mapbox_style="carto-positron",
-        featureidkey="properties.code",
-        zoom=5, center={"lon": -2.573158317817201, "lat": 46.75212876753963},
-        opacity=0.5,
-        labels={'Région': 'Débit'}
-    )
-
-    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-    return fig
-
-
 def getPourcentageDebitFigure():
+    """
+         Affichage de la graphe line avec la valeur par défaut (0,5 Mbit/s)
+
+            Returns:
+                Affiche la garphe line (map)
+            """
     map = px.line(data, x=data['Région'], y=data['0,5 Mbit/s'])
     return map
 
@@ -129,11 +120,6 @@ app.layout = html.Div([
     html.Div(dcc.Graph(
         id="mapPD",
     ), style={'display': 'inline-block', 'width': '49%'}),
-
-    # Ajouter le figure ligne
-    html.Div(dcc.Graph(
-        id="mapDebit",
-    ), style={'display': 'inline-block', 'width': '85%', 'margin-left': '5%'}),
 
     # Ajouter une ligne horizontale
     html.Hr(),
