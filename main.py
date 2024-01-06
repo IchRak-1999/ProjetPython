@@ -4,10 +4,6 @@ from dash import html
 import dash
 import plotly.express as px
 from dash import dcc
-import json
-
-with open("departements-region.json") as response:
-    GEOJSON = json.load(response)
 
 fileName = "Pourcentage_debit_departement.xlsx"
 data = readData(fileName)
